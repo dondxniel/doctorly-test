@@ -9,7 +9,7 @@ function MedicationItem({
 }) {
 	return (
 		<div
-			className={`p-3 mb-3 rounded-md w-2/5 text-sm border border-sky-800 cursor-pointer transition-all duration-500`}
+			className={`p-3 mb-3 rounded-md md:w-2/5 w-full text-sm border border-sky-800 cursor-pointer transition-all duration-500`}
 			onClick={() => {
 				!active ? setActive(item) : setActive(null);
 			}}

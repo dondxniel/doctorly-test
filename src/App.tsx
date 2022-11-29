@@ -1,4 +1,3 @@
-import bitap from "bitap";
 import { normalize } from "normalize-diacritics";
 import { FormEvent, useState } from "react";
 import Navbar from "./components/compound/Navbar";
@@ -46,13 +45,11 @@ function App() {
 					) {
 						break;
 					} else {
-						let idx = bitap(medicationName, searchQuery);
-						score = 100 + (medicationName.length - idx);
+						// Make sure that
+						if (searchQuery[j] === medicationName[i]) score += 1;
 					}
 				}
 			}
-			console.log(score);
-
 			score !== 0 && results.push({ ...item, score });
 		});
 		results = results.sort(
