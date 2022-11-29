@@ -18,14 +18,11 @@ function App() {
 		// fires every time the input field changes value.
 		let searchQuery = (e.target as HTMLInputElement).value;
 		setSearchValue(searchQuery);
-		let results = await naiveSearch(searchQuery, medications);
+		let results = naiveSearch(searchQuery, medications);
 		setSearchResults(results);
 	};
 
-	const naiveSearch = async function (
-		searchQuery: string,
-		medications: any[]
-	) {
+	const naiveSearch = function (searchQuery: string, medications: any[]) {
 		if (searchQuery === "") return [];
 		searchQuery = searchQuery.toLowerCase();
 

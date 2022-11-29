@@ -14,7 +14,7 @@ function MedicationItem({
 				!active ? setActive(item) : setActive(null);
 			}}
 		>
-			Name: {item.name} --- {item.score}
+			Name: {item.name}
 			<div
 				className={`overflow-hidden ${
 					JSON.stringify(active) === JSON.stringify(item)
